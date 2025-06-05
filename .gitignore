@@ -1,0 +1,9 @@
+/.tox
+/MlOpsProject.egg-info
+/build
+
+__pycache__
+/genre_model/logs
+
+/temp_name.egg-info
+/venv

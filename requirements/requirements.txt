@@ -1,0 +1,12 @@
+youtube_dl==2021.12.17
+keras_sequential_ascii==0.1.1
+pandas==2.3.0
+numpy==2.0.2
+matplotlib==3.9.4
+scipy==1.13.1
+librosa==0.11.0
+scikit-learn==1.5.2
+tensorflow==2.19.0
+scikeras==0.13.0
+pydantic==2.11.5
+strictyaml==1.7.3

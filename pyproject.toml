@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MlOpsProject"
+description = "temp desc"
+version = "25.2.3.beta1"
+authors = [
+	{ name = "Petr Doroshev", email = "m2415158@edu.misis.ru" },
+	{ name = "Michail Khizhnyak", email = "m2414908@edu.misis.ru" }
+]
+readme = "README.md"
+requires-python = ">=3.9, <3.10"
+dependencies = [
+	"youtube_dl==2021.12.17",
+	"keras_sequential_ascii==0.1.1",
+	"pandas==2.3.0",
+	"numpy==2.0.2",
+	"matplotlib==3.9.4",
+	"scipy==1.13.1",
+	"librosa==0.11.0",
+	"scikit-learn==1.5.2",
+	"tensorflow==2.19.0",
+	"scikeras==0.13.0",
+	"pydantic==2.11.5",
+	"strictyaml==1.7.3",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==8.4.0",
+    "tox==4.26.0",
+]
+dev = [
+    "black==25.1.0",
+    "flake8==7.2.0",
+    "isort==6.0.1",
+    "mypy==1.16.0",
+    "pytest==8.4.0",
+    "tox==4.26.0",
+	"jupyter==1.1.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/PetrDoroshev/MlOpsProject"
+
+[tool.setuptools]
+packages = {find = {exclude = ["tests"]}}
+package-data = {"titanic_model" = ["VERSION"]}
+include-package-data = true
