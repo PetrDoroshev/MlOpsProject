@@ -32,6 +32,6 @@ def make_prediction(
 
 if __name__ == "__main__":
 
-    audio, sr = load("../\GTA_ Vice City - Wildstyle  Hashim - Al Naafiysh (The Soul).mp3")
+    audio, sr = load("../GTA_ Vice City - Wildstyle  Hashim - Al Naafiysh (The Soul).mp3")
     features_data = extract_features(audio, sr)
     print(make_prediction(input_data=features_data))
