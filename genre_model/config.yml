@@ -14,6 +14,18 @@ le_save_file: le.pkl
 # The variable we are attempting to predict
 target: label
 
+classes:
+  - blues
+  - classical
+  - country
+  - disco
+  - hiphop
+  - jazz
+  - metal
+  - pop
+  - reggae
+  - rock
+
 features:
   - chroma_stft_mean
   - chroma_stft_var
