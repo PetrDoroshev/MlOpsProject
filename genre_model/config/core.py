@@ -34,6 +34,7 @@ class ModelConfig(BaseModel):
     """
 
     target: str
+    classes: List[str]
     features: List[str]
     variables_to_drop: Sequence[str]
     categorical_vars: Sequence[str]
