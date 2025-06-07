@@ -1,6 +1,6 @@
 from genre_model.processing import feature_extraction
 from genre_model.config.core import config
-from librosa import load
+
 
 
 def test_extract_features_returns_dict(audio_data):
