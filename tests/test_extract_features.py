@@ -1,6 +1,5 @@
-from genre_model.processing import feature_extraction
 from genre_model.config.core import config
-
+from genre_model.processing import feature_extraction
 
 
 def test_extract_features_returns_dict(audio_data):
@@ -16,4 +15,3 @@ def test_extract_features_correct_structure(audio_data):
     for val in result.values():
         assert isinstance(val, list)
         assert len(val) == 1
-
