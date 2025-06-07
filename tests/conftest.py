@@ -2,6 +2,7 @@ import pytest
 from genre_model.config.core import config, TESTS_DIR
 from genre_model.processing.data_manager import load_dataset
 from librosa import load
+from pathlib import Path
 import os
 
 @pytest.fixture()
@@ -10,4 +11,5 @@ def input_data():
 
 @pytest.fixture
 def audio_data():
-    return load(f"{TESTS_DIR}\classical.00005.wav")
+    test_file = TESTS_DIR / "classical.00005.wav"
+    return load(test_file)
