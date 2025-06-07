@@ -53,9 +53,18 @@ class Config(BaseModel):
 
 def find_config_file() -> Path:
     """Locate the configuration file."""
-    if CONFIG_FILE_PATH.is_file():
-        return CONFIG_FILE_PATH
-    raise Exception(f"Config not found at {CONFIG_FILE_PATH!r}")
+    import importlib.resources as pkg_resources
+
+    tr = pkg_resources.files("genre_model").joinpath("config.yml")
+
+    with pkg_resources.as_file(tr) as real_path:
+        if real_path.is_file():
+            return real_path
+        raise Exception(f"Config not found at {CONFIG_FILE_PATH!r}")
+
+    # if CONFIG_FILE_PATH.is_file():
+    #     return CONFIG_FILE_PATH
+    # raise Exception(f"Config not found at {CONFIG_FILE_PATH!r}")
 
 
 def fetch_config_from_yaml(cfg_path: Optional[Path] = None) -> YAML:

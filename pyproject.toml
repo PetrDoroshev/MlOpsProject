@@ -58,6 +58,9 @@ dev = [
 Homepage = "https://github.com/PetrDoroshev/MlOpsProject"
 
 [tool.setuptools]
-packages = {find = {exclude = ["tests"]}}
-package-data = {"titanic_model" = ["VERSION"]}
-include-package-data = true
+packages = {find = {where = ["."], include = ["genre_model"], exclude = ["tests"]}}
+# package-data = {"MlOpsProject" = ["VERSION"]}
+# include-package-data = true
+
+[tool.setuptools.package-data]
+genre_model = ["config.yml", "VERSION", "trained_models/*.pkl"]
