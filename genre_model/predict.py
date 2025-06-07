@@ -6,7 +6,7 @@ from genre_model.processing.data_manager import load_pipeline
 from genre_model.processing.validation import validate_inputs
 from genre_model.processing.feature_extraction import extract_features
 from librosa import load
-from config.core import config
+from genre_model.config.core import config
 
 pipeline_file_name = f"{config.app_config.pipeline_save_file}{_version}.pkl"
 pipeline = load_pipeline(file_name=pipeline_file_name)
