@@ -1,8 +1,10 @@
 import re
 from typing import List, Optional, Tuple
+
 import numpy as np
 import pandas as pd
 from pydantic import BaseModel, ValidationError
+
 from genre_model.config.core import config
 
 
@@ -80,6 +82,7 @@ class AudioInputSchema(BaseModel):
     mfcc19_var: float
     mfcc20_mean: float
     mfcc20_var: float
+
 
 class MultipleAudioInputs(BaseModel):
     inputs: List[AudioInputSchema]

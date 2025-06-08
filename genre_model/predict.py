@@ -1,21 +1,25 @@
 import typing as t
-import pandas as pd
+
 import numpy as np
 import numpy.typing as npt
-from genre_model import __version__ as _version
-from genre_model.processing.data_manager import load_pipeline
-from genre_model.processing.validation import validate_inputs
-from genre_model.processing.feature_extraction import extract_features
+import pandas as pd
 from librosa import load
+
+from genre_model import __version__ as _version
 from genre_model.config.core import config
+from genre_model.processing.data_manager import load_pipeline
+from genre_model.processing.feature_extraction import extract_features
+from genre_model.processing.validation import validate_inputs
 
 pipeline_file_name = f"{config.app_config.pipeline_save_file}{_version}.pkl"
 pipeline = load_pipeline(file_name=pipeline_file_name)
+
 
 def resolve_prediction(input_data: np.int64) -> str:
     aval_classes = config.ml_model_config.classes
 
     return aval_classes[input_data]
+
 
 def make_prediction(
     *,
