@@ -1,3 +1,3 @@
 # MlOpsProject
 <br>
-Neural Network based music genre classifier
+MLP based music genre classifier
